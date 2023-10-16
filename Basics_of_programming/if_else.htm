@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Branching with if - else</title>
+</head>
+<body>
+<script>
+    var a = 12, b = 7;
+    //1. Einfache Verzweigung
+    if(a > b)
+        document.write("<p>1: a ist größer als b </p>");
+
+    //2. Einfache Verzweigung, mit else
+    if (a < b)
+        document.write("<p>2: a ist kleiner als b </p>");
+    else
+        document.write("<p>2: a ist nicht kleiner als b </p>");
+
+    //3. Einfache Verzweigung, mehrere Anweisungen im Block
+    if (a > b)
+    {
+        document.write("<p>3: a ist größer als b <br>");
+        document.write("3: Eine weitere Zeile <br>");
+    }
+
+    //4. Mehrfache Verzweigung
+    if (a > b)
+        document.write("<p>4: a ist größer als b <br>");
+    else if (a < b)
+        document.write("<p>4: a ist kleiner als b </p>");
+    else
+        document.write("<p>4: a ist gleich b </p>");
+
+    //5. Zeichenketten
+    var land = "Spanien";
+    if (land == "Spanien")
+        document.write("<p>5: Land ist Spanien</p>");
+    if (land != "Spanien")
+        document.write("<p>5: Land ist nicht Spanien</p>");
+
+    //6. Ternärer Operator
+    var groesser = (a > b) ? a : b;
+    document.write("<p>6. Die größere Zahl ist " + groesser + "</p>");
+
+</script>
+</body>
+</html>
