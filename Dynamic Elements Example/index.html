@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Elements Example</title>
+</head>
+<body>
+
+<h2>Dynamic Elements Example</h2>
+
+<button id="addBtn">Add Item</button>
+<button id="removeBtn">Remove Item</button>
+
+<ul id="itemList">
+</ul>
+
+<script>
+// Function to add a new item to the list
+function addItem() {
+    const itemList = document.getElementById('itemList');
+    const newItem = document.createElement('li');
+    newItem.textContent = 'New Item';
+    itemList.appendChild(newItem);
+}
+
+// Function to remove the last item from the list
+function removeItem() {
+    const itemList = document.getElementById('itemList');
+    const lastItem = itemList.lastElementChild;
+    if (lastItem) {
+        itemList.removeChild(lastItem);
+    }
+}
+
+// Add event listeners to the buttons
+document.getElementById('addBtn').addEventListener('click', addItem);
+document.getElementById('removeBtn').addEventListener('click', removeItem);
+</script>
+
+</body>
+</html>
